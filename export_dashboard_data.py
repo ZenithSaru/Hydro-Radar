@@ -34,6 +34,9 @@ def main():
         signals = conn.execute(
             "SELECT * FROM recruitment_signals ORDER BY recruiting_score DESC LIMIT 100"
         ).fetchall()
+        pipeline = conn.execute(
+            "SELECT * FROM tracked_items ORDER BY updated_at DESC LIMIT 300"
+        ).fetchall()
 
     data = {
         "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
@@ -42,6 +45,7 @@ def main():
         "faculty": rows_to_dicts(faculty),
         "discovered_urls": rows_to_dicts(discovered),
         "recruitment_signals": rows_to_dicts(signals),
+        "pipeline": rows_to_dicts(pipeline),
     }
 
     import os
@@ -52,7 +56,7 @@ def main():
     print(f"[export] wrote {OUT_PATH}: "
           f"{len(awards)} awards, {len(opportunities)} opportunities, "
           f"{len(faculty)} faculty pages, {len(discovered)} discovered URLs, "
-          f"{len(signals)} recruitment signals")
+          f"{len(signals)} recruitment signals, {len(pipeline)} pipeline items")
     return data
 
 

@@ -62,24 +62,34 @@ def main(dry_run=False):
             )
 
             if (is_new or changed) and kws:
-                alerts.append((url, parsed, kws, is_new))
+                ref_id = db.create_tracked_item(
+                    conn,
+                    source_type="faculty",
+                    source_key=url,
+                    title=parsed["page_title"],
+                    contact_email=", ".join(parsed["emails"]),
+                    url=url,
+                    matched_kw=", ".join(kws),
+                )
+                alerts.append((url, parsed, kws, is_new, ref_id))
 
             time.sleep(0.3)
 
         print(f"[faculty] {len(alerts)} new/changed page(s) worth flagging")
 
         if not dry_run:
-            for url, parsed, kws, is_new in alerts:
+            for url, parsed, kws, is_new, ref_id in alerts:
                 try:
-                    send_telegram(format_faculty_message(url, parsed, kws, is_new))
+                    msg = format_faculty_message(url, parsed, kws, is_new) + f"\n\n_Ref: #{ref_id} — /help for commands_"
+                    send_telegram(msg)
                     db.mark_faculty_notified(conn, url)
                     time.sleep(1)
                 except Exception as e:
                     print(f"[telegram] failed for {url}: {e}", file=sys.stderr)
         else:
-            for url, parsed, kws, is_new in alerts:
+            for url, parsed, kws, is_new, ref_id in alerts:
                 tag = "NEW" if is_new else "CHANGED"
-                print(f" - [{tag}] {parsed['page_title']} — {url}")
+                print(f" - [#{ref_id}] [{tag}] {parsed['page_title']} — {url}")
 
     return alerts
 

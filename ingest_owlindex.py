@@ -73,19 +73,33 @@ def main(dry_run=False):
                 time.sleep(0.3)
 
         new_opps.sort(key=lambda o: o["score"], reverse=True)
+
+        for opp in new_opps:
+            opp["ref_id"] = db.create_tracked_item(
+                conn,
+                source_type="owlindex",
+                source_key=opp["post_url"],
+                title=opp["title"],
+                institution=opp["institution"],
+                summary=opp["summary"],
+                url=opp["post_url"],
+                matched_kw=opp["matched_kw"],
+            )
+
         print(f"[owlindex] {len(new_opps)} new opportunit(y/ies) found")
 
         if not dry_run:
             for opp in new_opps:
                 try:
-                    send_telegram(format_opportunity_message(opp))
+                    msg = format_opportunity_message(opp) + f"\n\n_Ref: #{opp['ref_id']} — /help for commands_"
+                    send_telegram(msg)
                     db.mark_opportunity_notified(conn, opp["post_url"])
                     time.sleep(1)
                 except Exception as e:
                     print(f"[telegram] failed for {opp['post_url']}: {e}", file=sys.stderr)
         else:
             for opp in new_opps:
-                print(f" - [{opp['score']}] {opp['title'][:90]}")
+                print(f" - [#{opp['ref_id']}] [{opp['score']}] {opp['title'][:90]}")
 
     return new_opps
 

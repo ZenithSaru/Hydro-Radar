@@ -3,22 +3,26 @@
 Watches NSF grants, Owlindex postings, faculty/lab pages you choose to
 track, and (optionally) Google for funded RA/GA/MS/PhD opportunities in
 hydrology / water resources / groundwater / flood modeling / etc. Scores
-everything, alerts you on Telegram, and publishes a browsable dashboard —
-all running free on a daily GitHub Actions schedule. No server to maintain.
+everything, alerts you on Telegram with a reference number you can act on,
+tracks each one through a status pipeline, drafts outreach emails, and
+publishes a browsable dashboard — all running free on a GitHub Actions
+schedule. No server to maintain.
 
-All 7 sprints from the design brief are implemented. Two of them (4 and 6)
-have honest limitations described below — read those before you expect
-magic.
+All 8 sprints are implemented (7 from the original design brief, plus a
+Sprint 8 "response pipeline" added afterward). A few of them have honest
+limitations described below — read those before you expect magic.
 
 ## Architecture
 
 ```
 NSF Awards API ──┐
 Owlindex scrape ──┤
-Faculty pages ────┼──► keyword filter + scoring ──► radar.db (SQLite) ──┬──► Telegram alerts (per item)
+Faculty pages ────┼──► keyword filter + scoring ──► radar.db (SQLite) ──┬──► Telegram alerts (with #ref)
 Google (optional) ┘                                                     ├──► Daily digest (Telegram)
-                                                                         └──► docs/data.json ──► GitHub Pages dashboard
-awards table ──► recruitment heuristic ──► recruitment_signals table ───┘
+                                                                         ├──► tracked_items (pipeline)
+awards table ──► recruitment heuristic ──► recruitment_signals table ───┘         │
+                                                                                   ├──► /status /note /draft via Telegram (polled)
+                                                                                   └──► docs/data.json ──► GitHub Pages dashboard (Pipeline tab)
 ```
 
 Everything lives in one SQLite file (`radar.db`) that's committed back to
@@ -36,6 +40,7 @@ without a database server.
 | 5. Ranking & prioritization | folded into each sprint's `scoring.py` calls + `export_dashboard_data.py` | Full |
 | 6. Recruitment intelligence | `analyze_recruitment.py` | **Heuristic score, not a trained model.** Combines award recency + amount + a rough Semantic Scholar publication count. Treat it as a ranking signal, not a probability |
 | 7. Dashboard & analytics | `docs/index.html` + `export_dashboard_data.py` | Full — static site on GitHub Pages, updated each run |
+| 8. Response pipeline | `process_commands.py`, `email_templates.py`, `ai_draft.py` | Full — status tracking + drafted (not sent) emails, via Telegram commands, polled every ~15 min |
 
 ## One-time setup
 
@@ -62,9 +67,20 @@ git push -u origin main
 
 ### 3. (Optional) Enable Sprint 4 — Google discovery
 
+Google retired "Search the entire web" for new Programmable Search Engines
+in early 2026 — new engines must specify actual domains (up to 50), and
+bare TLD wildcards like `*.edu/*` are rejected outright. So this now works
+by listing specific university domains instead:
+
 1. Create an API key at https://console.cloud.google.com/apis/credentials (enable the "Custom Search API")
-2. Create a Programmable Search Engine at https://programmablesearchengine.google.com/ — under **Sites to search**, choose **"Search the entire web"**
-3. Add two more repo secrets: `GOOGLE_API_KEY` and `GOOGLE_CSE_ID`
+2. Create a Programmable Search Engine at https://programmablesearchengine.google.com/
+3. Under **Sites to search → Add**, paste a list of university domains as
+   `*.domain.edu/*` patterns, one per line (Google accepts a multi-line
+   paste here). A ~40-domain starter list covering major US water-resources
+   programs is available on request — ask and I'll generate one for you,
+   or reuse the one already given to you in chat.
+4. Copy the **Search engine ID** from the engine's Overview page
+5. Add two repo secrets: `GOOGLE_API_KEY` and `GOOGLE_CSE_ID`
 
 Skip this and Sprint 4 just no-ops (the pipeline logs a note and moves on)
 — free tier is 100 queries/day, plenty for the ~6 queries/day this runs.
@@ -82,12 +98,30 @@ FACULTY_SEED_URLS = [
 
 Leave it empty and Sprint 3 just skips with a note.
 
-### 5. Enable GitHub Pages (for the dashboard)
+### 5. Fill in your profile (for Sprint 8's email drafts)
+
+Edit `config.py`'s `USER_PROFILE` dict with your real name, program,
+institution, and a one-line pitch. This is what gets dropped into drafted
+outreach emails — nothing is sent anywhere automatically, drafts only ever
+come back to you on Telegram to copy, edit, and send yourself.
+
+### 6. (Optional) Enable AI-assisted drafts
+
+Without this, `/draft` uses a plain mail-merge template (still fully
+functional, just generic). To get better, more tailored drafts:
+
+1. Get an API key from https://console.anthropic.com/
+2. Add a repo secret named `ANTHROPIC_API_KEY`
+
+If it's missing or a call fails for any reason, `/draft` automatically
+falls back to the template — you'll never get an error instead of a draft.
+
+### 7. Enable GitHub Pages (for the dashboard)
 
 **Settings → Pages → Source → GitHub Actions.** The workflow's
 `deploy-pages` job publishes `docs/` there automatically after each run.
 
-### 6. Seed the database (recommended)
+### 8. Seed the database (recommended)
 
 Without this, your first scheduled run alerts you on everything currently
 matching — could be 50+ Telegram messages at once. Populate the DB quietly
@@ -106,10 +140,33 @@ git commit -m "Seed database"
 git push
 ```
 
-### 7. That's it
+### 9. That's it
 
-The workflow runs daily at 13:00 UTC, or trigger it manually any time from
-the **Actions** tab → "Hydrology Opportunity Radar" → **Run workflow**.
+Two workflows run on their own:
+- **"Hydrology Opportunity Radar"** — daily at 13:00 UTC, does the actual discovery
+- **"Hydrology Radar - Command Poller"** — every ~15 minutes, checks for
+  Telegram commands and replies
+
+Trigger either manually any time from the **Actions** tab.
+
+## Talking to the pipeline (Sprint 8)
+
+Every alert you get includes a reference number, e.g. `Ref: #42`. Reply to
+your bot on Telegram (not a comment on the message — just send it a new
+message) with any of:
+
+```
+/status 42 interested      valid: new, interested, applied, interview, offer, rejected, skip
+/note 42 emailed prof, waiting to hear back
+/draft 42                  drafts an outreach email for item #42
+/list                      lists everything you're tracking
+/list applied              lists only items with that status
+/help                      shows this cheat sheet
+```
+
+Replies aren't instant — the poller checks every ~15 minutes (GitHub's
+scheduler can add its own delay on top, especially on the free tier), so
+expect a reply within 15-30 minutes, not seconds.
 
 ## Tuning it
 
@@ -132,6 +189,7 @@ python discover_google.py --dry-run
 python analyze_recruitment.py --dry-run
 python daily_digest.py --dry-run
 python export_dashboard_data.py     # always writes docs/data.json, no Telegram involved
+python process_commands.py          # checks for + replies to Telegram commands once (no --dry-run; it's read-then-reply by nature)
 ```
 
 ## Known limitations (read this)
@@ -148,6 +206,13 @@ python export_dashboard_data.py     # always writes docs/data.json, no Telegram 
   common names.
 - **Sprint 4 needs your own Google API credentials** and only scores
   against search snippets, not full page crawls.
+- **Sprint 8's drafts need a human pass before sending.** The template
+  version is generic mail-merge; the AI version is better but still
+  reflects only what's in the alert (title/abstract/snippet) — it doesn't
+  know anything about the professor beyond that. Neither one ever sends
+  anything; you always copy/paste yourself.
+- **Command replies aren't instant.** The poller runs every ~15 minutes,
+  and GitHub's free-tier scheduler can add its own delay on top.
 
 None of this is fake — every script here runs against the real, live APIs
 and was checked against them while building. The limitations above are

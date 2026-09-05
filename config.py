@@ -122,3 +122,34 @@ RECRUITMENT_MIN_AWARD_USD = 150_000
 # pull a rough recent-publication count as a secondary signal. Set to False
 # to skip this (award-only scoring), e.g. if you're hitting rate limits.
 USE_SEMANTIC_SCHOLAR = True
+
+# ---------------------------------------------------------------------------
+# Sprint 8: Response Pipeline (tracking + email drafts)
+# ---------------------------------------------------------------------------
+# Fill this in with your own info — it's what gets dropped into drafted
+# outreach emails. Nothing here is sent anywhere automatically; drafts are
+# only ever shown to you via Telegram for you to copy, edit, and send
+# yourself.
+USER_PROFILE = {
+    "name": "Your Name",
+    "current_program": "graduate student in Civil Engineering",  # phrase this so "a {current_program}" reads naturally
+    "current_institution": "Your University",
+    "research_focus": (
+        "land subsidence prediction using Sentinel-1 InSAR and machine "
+        "learning, with a focus on infrastructure risk screening"
+    ),
+    "one_line_pitch": (
+        "an MS student finishing a thesis on ML-based subsidence "
+        "susceptibility mapping, looking for PhD opportunities in "
+        "hydrology / water resources engineering"
+    ),
+}
+
+# Valid pipeline statuses, in the order they're shown in /help and the
+# dashboard's Pipeline tab.
+PIPELINE_STATUSES = ["new", "interested", "applied", "interview", "offer", "rejected", "skip"]
+
+# Optional: if you set an ANTHROPIC_API_KEY secret, /draft commands use the
+# Claude API to write a more tailored email instead of the plain template.
+# Cheap model by default since drafts are short.
+ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"

@@ -73,19 +73,32 @@ def main(dry_run=False):
             time.sleep(0.5)
 
         new_items.sort(key=lambda i: i["score"], reverse=True)
+
+        for item in new_items:
+            item["ref_id"] = db.create_tracked_item(
+                conn,
+                source_type="discovered_url",
+                source_key=item["url"],
+                title=item["title"],
+                summary=item["snippet"],
+                url=item["url"],
+                matched_kw=item["matched_kw"],
+            )
+
         print(f"[google] {len(new_items)} new URL(s) found")
 
         if not dry_run:
             for item in new_items:
                 try:
-                    send_telegram(format_discovery_message(item))
+                    msg = format_discovery_message(item) + f"\n\n_Ref: #{item['ref_id']} — /help for commands_"
+                    send_telegram(msg)
                     db.mark_url_notified(conn, item["url"])
                     time.sleep(1)
                 except Exception as e:
                     print(f"[telegram] failed for {item['url']}: {e}", file=sys.stderr)
         else:
             for item in new_items:
-                print(f" - [{item['score']}] {item['title'][:90]}")
+                print(f" - [#{item['ref_id']}] [{item['score']}] {item['title'][:90]}")
 
     return new_items
 

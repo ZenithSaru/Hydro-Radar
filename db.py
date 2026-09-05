@@ -79,6 +79,33 @@ CREATE TABLE IF NOT EXISTS recruitment_signals (
     notified            INTEGER DEFAULT 0,
     PRIMARY KEY (pi_name, institution, award_id)
 );
+
+-- Sprint 8: response pipeline. One row per alert ever sent, across every
+-- source above (denormalized on purpose — this table is self-contained so
+-- commands/drafts never need to join back into the source-specific tables).
+CREATE TABLE IF NOT EXISTS tracked_items (
+    ref_id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    source_type   TEXT,   -- 'nsf_award' | 'owlindex' | 'recruitment_signal' | 'faculty' | 'discovered_url'
+    source_key    TEXT,   -- the source table's own primary key, for reference
+    title         TEXT,
+    institution   TEXT,
+    pi_name       TEXT,
+    contact_email TEXT,
+    summary       TEXT,
+    url           TEXT,
+    matched_kw    TEXT,
+    status        TEXT DEFAULT 'new',   -- new | interested | applied | interview | offer | rejected | skip
+    notes         TEXT DEFAULT '',
+    created_at    TEXT DEFAULT CURRENT_TIMESTAMP,
+    updated_at    TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Sprint 8: small key/value store for the command-poller (tracks the last
+-- processed Telegram update so it doesn't reprocess the same message twice).
+CREATE TABLE IF NOT EXISTS bot_state (
+    key    TEXT PRIMARY KEY,
+    value  TEXT
+);
 """
 
 
@@ -249,4 +276,70 @@ def mark_signal_notified(conn, pi_name, institution, award_id):
     conn.execute(
         "UPDATE recruitment_signals SET notified = 1 WHERE pi_name = ? AND institution = ? AND award_id = ?",
         (pi_name, institution, award_id),
+    )
+
+
+# --- Sprint 8: response pipeline --------------------------------------------
+
+def create_tracked_item(conn, source_type, source_key, title="", institution="",
+                         pi_name="", contact_email="", summary="", url="", matched_kw=""):
+    """Call this right before sending a Telegram alert for any new item, from
+    any sprint. Returns the ref_id to embed in the alert message (e.g. "#42")
+    so the user can act on it with /status, /note, /draft commands.
+    """
+    cur = conn.execute(
+        """
+        INSERT INTO tracked_items
+            (source_type, source_key, title, institution, pi_name,
+             contact_email, summary, url, matched_kw)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (source_type, source_key, title, institution, pi_name,
+         contact_email, summary, url, matched_kw),
+    )
+    return cur.lastrowid
+
+
+def get_tracked_item(conn, ref_id):
+    return conn.execute(
+        "SELECT * FROM tracked_items WHERE ref_id = ?", (ref_id,)
+    ).fetchone()
+
+
+def update_status(conn, ref_id, status):
+    conn.execute(
+        "UPDATE tracked_items SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE ref_id = ?",
+        (status, ref_id),
+    )
+
+
+def add_note(conn, ref_id, note):
+    conn.execute(
+        "UPDATE tracked_items SET notes = ?, updated_at = CURRENT_TIMESTAMP WHERE ref_id = ?",
+        (note, ref_id),
+    )
+
+
+def list_tracked(conn, status=None):
+    if status:
+        return conn.execute(
+            "SELECT * FROM tracked_items WHERE status = ? ORDER BY updated_at DESC", (status,)
+        ).fetchall()
+    return conn.execute(
+        "SELECT * FROM tracked_items ORDER BY updated_at DESC"
+    ).fetchall()
+
+
+# --- Sprint 8: bot polling state ---------------------------------------------
+
+def get_state(conn, key, default=None):
+    row = conn.execute("SELECT value FROM bot_state WHERE key = ?", (key,)).fetchone()
+    return row["value"] if row else default
+
+
+def set_state(conn, key, value):
+    conn.execute(
+        "INSERT INTO bot_state (key, value) VALUES (?, ?) "
+        "ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+        (key, value),
     )

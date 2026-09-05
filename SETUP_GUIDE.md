@@ -157,7 +157,50 @@ no rush.
 
 ---
 
-## Part 9 — What happens next
+## Part 9 — Talk back to it (new: reply to alerts, get draft emails)
+
+Every alert now includes a line like `Ref: #42`. You can reply to your bot
+on Telegram with simple commands to track and act on that item:
+
+```
+/status 42 interested
+/status 42 applied
+/note 42 emailed the professor, waiting to hear back
+/draft 42
+/list
+/help
+```
+
+`/draft 42` writes you a draft outreach email for that item — **it never
+sends anything**, it just hands you text to copy, tweak, and send yourself
+from your own email.
+
+Replies from the bot aren't instant — there's a second robot job that
+checks for your messages every ~15 minutes, so expect a reply within
+15–30 minutes, not seconds.
+
+### One-time setup for this part
+
+1. Open `config.py` in your repo (pencil icon to edit, same as before).
+2. Find the `USER_PROFILE` section near the bottom and fill in your real
+   name, program, university, and a one-line description of what you're
+   looking for. This is what appears in the drafted emails.
+3. Commit the change.
+
+That's it — status tracking and template-based drafts work immediately
+with just that. If you'd like noticeably better-written drafts, you can
+optionally add one more secret:
+
+4. Get a free-to-start API key from **https://console.anthropic.com/**
+5. **Settings → Secrets and variables → Actions → New repository secret** →
+   name it `ANTHROPIC_API_KEY`, paste the key.
+
+Skip step 4–5 entirely if you don't want this — `/draft` will just use the
+plain template version instead, which still works fine.
+
+---
+
+## Part 10 — What happens next
 
 - It reruns automatically once a day — you don't need to do anything.
 - Telegram messages will only arrive for genuinely new findings.
@@ -184,6 +227,12 @@ bots can't message you until you've messaged them at least once.
 **Dashboard says "No data.json yet"?**
 That means the workflow hasn't successfully completed a run yet — check
 the Actions tab for errors first.
+
+**Sent a command like `/status 42 applied` but got no reply?**
+Check the **Actions** tab for a workflow called "Hydrology Radar - Command
+Poller" — it only checks every ~15 minutes, so give it a bit. If a run
+already happened after you sent the command and you still got nothing,
+open that run's log and see what it printed for your message.
 
 **Still stuck?**
 Copy the error message from the Actions tab and send it to me — I'll tell

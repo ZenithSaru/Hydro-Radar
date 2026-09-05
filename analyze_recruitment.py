@@ -104,19 +104,34 @@ def main(dry_run=False):
             new_signals.append(sig)
 
         new_signals.sort(key=lambda s: s["recruiting_score"], reverse=True)
+
+        for sig in new_signals:
+            sig["ref_id"] = db.create_tracked_item(
+                conn,
+                source_type="recruitment_signal",
+                source_key=f"{sig['pi_name']}|{sig['institution']}|{sig['award_id']}",
+                title=f"Recruiting signal: {sig['pi_name']} @ {sig['institution']}",
+                institution=sig["institution"],
+                pi_name=sig["pi_name"],
+                summary=f"Recent award of ${sig['amount_usd']:,} on {sig['award_date']}",
+                url=f"https://www.nsf.gov/awardsearch/showAward?AWD_ID={sig['award_id']}",
+                matched_kw="",
+            )
+
         print(f"[recruitment] {len(new_signals)} new recruitment signal(s)")
 
         if not dry_run:
             for sig in new_signals:
                 try:
-                    send_telegram(format_signal_message(sig))
+                    msg = format_signal_message(sig) + f"\n\n_Ref: #{sig['ref_id']} — /help for commands_"
+                    send_telegram(msg)
                     db.mark_signal_notified(conn, sig["pi_name"], sig["institution"], sig["award_id"])
                     time.sleep(1)
                 except Exception as e:
                     print(f"[telegram] failed for {sig['pi_name']}: {e}", file=sys.stderr)
         else:
             for sig in new_signals:
-                print(f" - [{sig['recruiting_score']}] {sig['pi_name']} @ {sig['institution']}")
+                print(f" - [#{sig['ref_id']}] [{sig['recruiting_score']}] {sig['pi_name']} @ {sig['institution']}")
 
     return new_signals
 

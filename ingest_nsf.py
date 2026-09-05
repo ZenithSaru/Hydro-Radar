@@ -112,19 +112,36 @@ def main(dry_run=False):
 
         new_awards.sort(key=lambda a: a["score"], reverse=True)
 
+        # Sprint 8: register every new award in the response pipeline so it
+        # gets a #ref usable with /status, /note, /draft — regardless of
+        # dry_run, so seeding still builds a browsable pipeline.
+        for award in new_awards:
+            award["ref_id"] = db.create_tracked_item(
+                conn,
+                source_type="nsf_award",
+                source_key=award["award_id"],
+                title=award["title"],
+                institution=award["institution"],
+                pi_name=award["pi_name"],
+                summary=award["abstract"],
+                url=award["url"],
+                matched_kw=award["matched_kw"],
+            )
+
         print(f"[nsf] {len(new_awards)} new award(s) found")
 
         if not dry_run:
             for award in new_awards:
                 try:
-                    send_telegram(format_award_message(award))
+                    msg = format_award_message(award) + f"\n\n_Ref: #{award['ref_id']} — /help for commands_"
+                    send_telegram(msg)
                     db.mark_notified(conn, award["award_id"])
                     time.sleep(1)  # avoid Telegram rate limits
                 except Exception as e:
                     print(f"[telegram] failed for {award['award_id']}: {e}", file=sys.stderr)
         else:
             for award in new_awards:
-                print(f" - [{award['score']}] {award['institution']}: {award['title'][:80]}")
+                print(f" - [#{award['ref_id']}] [{award['score']}] {award['institution']}: {award['title'][:80]}")
 
     return new_awards
 
