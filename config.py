@@ -86,9 +86,21 @@ OWLINDEX_MAX_POSTS_PER_TAG = 40
 # departments you're tracking. The scraper re-visits these on every run and
 # flags new/changed email or research-area mentions.
 FACULTY_SEED_URLS = [
-    # "https://www.example.edu/faculty/jane-smith",
-    # "https://waterlab.example.edu/people",
+    # -- Land subsidence / InSAR (closest match to your thesis niche) --
+    "https://globalchange.vt.edu/faculty/affiliated/shirzaei-manoochehr.html",  # Shirzaei, Virginia Tech — land subsidence, InSAR, groundwater-driven deformation
+    "https://seismo.berkeley.edu/~burgmann",  # Bürgmann, UC Berkeley — Active Tectonics group, InSAR/GPS, has posted PhD openings before
+
+    # -- Groundwater --
+    "https://watershed.ucdavis.edu/people/thomas-harter",  # Harter, UC Davis — groundwater hydrology, contaminant transport
+
+    # -- Utah Water Research Laboratory, Utah State University --
+    "https://uwrl.usu.edu/people/faculty/",  # full faculty directory — broad net across the whole lab
+    "https://uwrl.usu.edu/people/faculty/neilson-bethany",  # Neilson, UWRL director — watershed hydrology
+    "https://uwrl.usu.edu/people/faculty/rosenberg-david",  # Rosenberg — water resources management
+    "https://uwrl.usu.edu/people/faculty/lane-belize",  # Lane — rivers, watersheds, water flow
+    "https://uwrl.usu.edu/people/faculty/torres-alfonso",  # Torres-Rua — remote sensing for water/irrigation
 ]
+
 
 # ---------------------------------------------------------------------------
 # Sprint 4: Google Discovery Engine

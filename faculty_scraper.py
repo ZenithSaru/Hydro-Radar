@@ -28,10 +28,22 @@ def fetch_and_parse(url: str):
     title_tag = soup.find("title")
     page_title = title_tag.get_text(strip=True) if title_tag else url
 
+    # Grab meta description before stripping anything — academic bio pages
+    # often summarize research focus there even when the body text doesn't
+    # spell it out.
+    meta_desc_tag = soup.find("meta", attrs={"name": "description"})
+    meta_desc = meta_desc_tag.get("content", "") if meta_desc_tag else ""
+
+    # Image alt-text often carries keywords the visible prose doesn't (e.g.
+    # a figure captioned "InSAR image of a fault" on a page whose body text
+    # never actually says "InSAR"). Collect these before stripping tags.
+    alt_texts = " ".join(img.get("alt", "") for img in soup.find_all("img") if img.get("alt"))
+
     # Strip nav/script/style noise before extracting text
     for tag in soup(["script", "style", "nav", "footer"]):
         tag.decompose()
-    text = soup.get_text(separator=" ", strip=True)
+    body_text = soup.get_text(separator=" ", strip=True)
+    text = " ".join(filter(None, [body_text, alt_texts, meta_desc]))
 
     emails = set(EMAIL_RE.findall(text))
     for a in soup.find_all("a", href=re.compile(r"^mailto:")):
