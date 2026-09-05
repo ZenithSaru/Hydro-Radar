@@ -1,0 +1,95 @@
+name: Hydrology Opportunity Radar
+
+on:
+  schedule:
+    # 13:00 UTC daily ≈ 6:45pm Kathmandu time. Adjust to taste.
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write   # needed to commit radar.db and docs/data.json back to the repo
+  pages: write
+  id-token: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sprint 1 — NSF funding intelligence
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python ingest_nsf.py
+
+      - name: Sprint 2 — Owlindex opportunity discovery
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python ingest_owlindex.py
+
+      - name: Sprint 3 — Faculty & lab page monitoring
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python monitor_faculty.py
+
+      - name: Sprint 4 — Google discovery engine
+        # Silently no-ops if GOOGLE_API_KEY / GOOGLE_CSE_ID secrets aren't set.
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+        run: python discover_google.py
+
+      - name: Sprint 6 — Recruitment intelligence
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python analyze_recruitment.py
+
+      - name: Sprint 5/7 — Export dashboard data
+        run: python export_dashboard_data.py
+
+      - name: Sprint 5/7 — Daily digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python daily_digest.py
+
+      - name: Commit updated database + dashboard data
+        run: |
+          git config user.name "hydrology-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add radar.db docs/data.json
+          git diff --staged --quiet || git commit -m "Update radar data [skip ci]"
+          git push
+
+  deploy-pages:
+    needs: ingest
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
