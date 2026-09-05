@@ -27,15 +27,33 @@ def parse_nsf_date(s: str):
         return None
 
 
+def _to_str(value, sep="; "):
+    """NSF sometimes returns a field (notably primaryProgram, and
+    occasionally PI name fields) as a list instead of a plain string, e.g.
+    when an award has multiple co-funding programs. SQLite can't store a
+    Python list, so every string field going into the DB gets funneled
+    through this first.
+    """
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        return sep.join(str(v) for v in value if v)
+    return str(value)
+
+
 def normalize(raw: dict) -> dict:
-    award_id = raw.get("id")
-    title = raw.get("title", "") or ""
-    abstract = raw.get("abstractText", "") or ""
-    pi_name = f"{raw.get('piFirstName', '')} {raw.get('piLastName', '')}".strip()
+    award_id = _to_str(raw.get("id"))
+    title = _to_str(raw.get("title"))
+    abstract = _to_str(raw.get("abstractText"))
+    pi_first = _to_str(raw.get("piFirstName"))
+    pi_last = _to_str(raw.get("piLastName"))
+    pi_name = f"{pi_first} {pi_last}".strip()
     amount_raw = raw.get("fundsObligatedAmt")
+    if isinstance(amount_raw, list):
+        amount_raw = amount_raw[0] if amount_raw else None
     try:
         amount_usd = int(float(amount_raw)) if amount_raw else 0
-    except ValueError:
+    except (ValueError, TypeError):
         amount_usd = 0
 
     full_text = f"{title} {abstract}"
@@ -45,12 +63,12 @@ def normalize(raw: dict) -> dict:
     return {
         "award_id": award_id,
         "title": title,
-        "institution": raw.get("awardeeName", "Unknown"),
+        "institution": _to_str(raw.get("awardeeName")) or "Unknown",
         "pi_name": pi_name or "Unknown",
         "amount_usd": amount_usd,
-        "program": raw.get("primaryProgram", "Unknown"),
-        "start_date": raw.get("startDate", ""),
-        "awarded_date": raw.get("date", ""),
+        "program": _to_str(raw.get("primaryProgram")) or "Unknown",
+        "start_date": _to_str(raw.get("startDate")),
+        "awarded_date": _to_str(raw.get("date")),
         "abstract": abstract,
         "url": f"https://www.nsf.gov/awardsearch/showAward?AWD_ID={award_id}",
         "matched_kw": ", ".join(kws),
@@ -76,7 +94,7 @@ def main(dry_run=False):
                     if db.is_known(conn, award_id):
                         continue
 
-                    award_date = parse_nsf_date(raw.get("date"))
+                    award_date = parse_nsf_date(_to_str(raw.get("date")))
                     if award_date and award_date < cutoff:
                         continue
 
