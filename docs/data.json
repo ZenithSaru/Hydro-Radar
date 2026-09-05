@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T16:25:47.632934Z",
+  "generated_at": "2026-09-05T16:53:16.892250Z",
   "awards": [
     {
       "award_id": "2544049",
@@ -300,7 +300,85 @@
       "notified": 1
     }
   ],
-  "faculty": [],
+  "faculty": [
+    {
+      "source_url": "https://uwrl.usu.edu/people/faculty/torres-alfonso",
+      "emails": "alfonso.torres@usu.edu",
+      "matched_kw": "water resources, watershed",
+      "page_title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
+      "content_hash": "dc6ff50d91aaa54dd0ed38f9fb9bc324d29a2768a47cfe80f81d1c012df84049",
+      "first_seen": "2026-09-05 16:53:04",
+      "last_checked": "2026-09-05 16:53:04",
+      "last_changed": "2026-09-05 16:53:04",
+      "notified": 1
+    },
+    {
+      "source_url": "https://uwrl.usu.edu/people/faculty/lane-belize",
+      "emails": "belize.lane@usu.edu",
+      "matched_kw": "hydrology, hydrologic, water resources, watershed, streamflow",
+      "page_title": "Belize Lane | Utah Water Research Laboratory | USU",
+      "content_hash": "82b34ac6702760b8ab4c9feed54e4c1aad7bf9a4bdf0067341d2db86bfca9615",
+      "first_seen": "2026-09-05 16:52:58",
+      "last_checked": "2026-09-05 16:52:58",
+      "last_changed": "2026-09-05 16:52:58",
+      "notified": 1
+    },
+    {
+      "source_url": "https://uwrl.usu.edu/people/faculty/rosenberg-david",
+      "emails": "david.rosenberg@usu.edu",
+      "matched_kw": "hydrology, hydrologic, water resources, hydroinformatics, groundwater, watershed, streamflow",
+      "page_title": "David Rosenberg | Utah Water Research Laboratory | USU",
+      "content_hash": "824a75b191f0ee6800fe3700b82cfad5ea652e1271f8aacf8278dfccce9cd494",
+      "first_seen": "2026-09-05 16:52:56",
+      "last_checked": "2026-09-05 16:52:56",
+      "last_changed": "2026-09-05 16:52:56",
+      "notified": 1
+    },
+    {
+      "source_url": "https://uwrl.usu.edu/people/faculty/neilson-bethany",
+      "emails": "bethany.neilson@usu.edu",
+      "matched_kw": "hydrology, hydrologic, water resources, hydroinformatics, groundwater, watershed, streamflow, water quality modeling",
+      "page_title": "Bethany Neilson | Utah Water Research Laboratory | USU",
+      "content_hash": "6ab817d3c358bc8ca826fae951f3a01011ccd9eaeb93978774cdad1e1f3054c8",
+      "first_seen": "2026-09-05 16:52:52",
+      "last_checked": "2026-09-05 16:52:52",
+      "last_changed": "2026-09-05 16:52:52",
+      "notified": 1
+    },
+    {
+      "source_url": "https://uwrl.usu.edu/people/faculty/",
+      "emails": " steve.barfuss@usu.edu, alfonso.torres@usu.edu, belize.lane@usu.edu, bethany.neilson@usu.edu, blake.tullis@usu.edu, brian.crookston@usu.edu, burdette.barker@usu.edu, colin.phillips@usu.edu, courtney.flint@usu.edu, david.rosenberg@usu.edu, david.tarboton@usu.edu, emma.payne@usu.edu, jeff.horsburgh@usu.edu, joan.mclean@usu.edu, kyle.moor@usu.edu, liyuan.hou@usu.edu, michael.johnson@usu.edu, michael.mcfarland@usu.edu, pin.shuai@usu.edu, randy.martin@usu.edu, ron.sims@usu.edu, ryan.dupont@usu.edu, sierra.young@usu.edu, steve.barfuss@usu.edu, yiming.su@usu.edu, zac.sharp@usu.edu",
+      "matched_kw": "water resources, groundwater",
+      "page_title": "Faculty | Utah Water Research Laboratory | USU",
+      "content_hash": "7e2b6e5beaa5d0420026559e719d9e14a84f5193d2b4e8ed23d5cd71d99e15f6",
+      "first_seen": "2026-09-05 16:52:47",
+      "last_checked": "2026-09-05 16:52:47",
+      "last_changed": "2026-09-05 16:52:47",
+      "notified": 1
+    },
+    {
+      "source_url": "https://seismo.berkeley.edu/~burgmann",
+      "emails": "",
+      "matched_kw": "InSAR",
+      "page_title": "Active Tectonics at UC Berkeley",
+      "content_hash": "120e6bdde75d53766c3eac7ceb502175fdfbdef8bea8391e7d60854e53567946",
+      "first_seen": "2026-09-05 16:52:46",
+      "last_checked": "2026-09-05 16:52:46",
+      "last_changed": "2026-09-05 16:52:46",
+      "notified": 1
+    },
+    {
+      "source_url": "https://globalchange.vt.edu/faculty/affiliated/shirzaei-manoochehr.html",
+      "emails": "shirzaei@vt.edu",
+      "matched_kw": "water resources, groundwater",
+      "page_title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
+      "content_hash": "81f595843f60a2f9021b671979b68e63a7e798b52614fd4e3c984c21ea39a9a2",
+      "first_seen": "2026-09-05 16:52:45",
+      "last_checked": "2026-09-05 16:52:45",
+      "last_changed": "2026-09-05 16:52:45",
+      "notified": 1
+    }
+  ],
   "discovered_urls": [],
   "recruitment_signals": [
     {
@@ -447,5 +525,118 @@
       "notified": 1
     }
   ],
-  "pipeline": []
+  "pipeline": [
+    {
+      "ref_id": 7,
+      "source_type": "faculty",
+      "source_key": "https://uwrl.usu.edu/people/faculty/torres-alfonso",
+      "title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": "alfonso.torres@usu.edu",
+      "summary": "",
+      "url": "https://uwrl.usu.edu/people/faculty/torres-alfonso",
+      "matched_kw": "water resources, watershed",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:53:04",
+      "updated_at": "2026-09-05 16:53:04"
+    },
+    {
+      "ref_id": 6,
+      "source_type": "faculty",
+      "source_key": "https://uwrl.usu.edu/people/faculty/lane-belize",
+      "title": "Belize Lane | Utah Water Research Laboratory | USU",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": "belize.lane@usu.edu",
+      "summary": "",
+      "url": "https://uwrl.usu.edu/people/faculty/lane-belize",
+      "matched_kw": "hydrology, hydrologic, water resources, watershed, streamflow",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:52:58",
+      "updated_at": "2026-09-05 16:52:58"
+    },
+    {
+      "ref_id": 5,
+      "source_type": "faculty",
+      "source_key": "https://uwrl.usu.edu/people/faculty/rosenberg-david",
+      "title": "David Rosenberg | Utah Water Research Laboratory | USU",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": "david.rosenberg@usu.edu",
+      "summary": "",
+      "url": "https://uwrl.usu.edu/people/faculty/rosenberg-david",
+      "matched_kw": "hydrology, hydrologic, water resources, hydroinformatics, groundwater, watershed, streamflow",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:52:56",
+      "updated_at": "2026-09-05 16:52:56"
+    },
+    {
+      "ref_id": 4,
+      "source_type": "faculty",
+      "source_key": "https://uwrl.usu.edu/people/faculty/neilson-bethany",
+      "title": "Bethany Neilson | Utah Water Research Laboratory | USU",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": "bethany.neilson@usu.edu",
+      "summary": "",
+      "url": "https://uwrl.usu.edu/people/faculty/neilson-bethany",
+      "matched_kw": "hydrology, hydrologic, water resources, hydroinformatics, groundwater, watershed, streamflow, water quality modeling",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:52:52",
+      "updated_at": "2026-09-05 16:52:52"
+    },
+    {
+      "ref_id": 3,
+      "source_type": "faculty",
+      "source_key": "https://uwrl.usu.edu/people/faculty/",
+      "title": "Faculty | Utah Water Research Laboratory | USU",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": " steve.barfuss@usu.edu, alfonso.torres@usu.edu, belize.lane@usu.edu, bethany.neilson@usu.edu, blake.tullis@usu.edu, brian.crookston@usu.edu, burdette.barker@usu.edu, colin.phillips@usu.edu, courtney.flint@usu.edu, david.rosenberg@usu.edu, david.tarboton@usu.edu, emma.payne@usu.edu, jeff.horsburgh@usu.edu, joan.mclean@usu.edu, kyle.moor@usu.edu, liyuan.hou@usu.edu, michael.johnson@usu.edu, michael.mcfarland@usu.edu, pin.shuai@usu.edu, randy.martin@usu.edu, ron.sims@usu.edu, ryan.dupont@usu.edu, sierra.young@usu.edu, steve.barfuss@usu.edu, yiming.su@usu.edu, zac.sharp@usu.edu",
+      "summary": "",
+      "url": "https://uwrl.usu.edu/people/faculty/",
+      "matched_kw": "water resources, groundwater",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:52:47",
+      "updated_at": "2026-09-05 16:52:47"
+    },
+    {
+      "ref_id": 2,
+      "source_type": "faculty",
+      "source_key": "https://seismo.berkeley.edu/~burgmann",
+      "title": "Active Tectonics at UC Berkeley",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": "",
+      "summary": "",
+      "url": "https://seismo.berkeley.edu/~burgmann",
+      "matched_kw": "InSAR",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:52:46",
+      "updated_at": "2026-09-05 16:52:46"
+    },
+    {
+      "ref_id": 1,
+      "source_type": "faculty",
+      "source_key": "https://globalchange.vt.edu/faculty/affiliated/shirzaei-manoochehr.html",
+      "title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": "shirzaei@vt.edu",
+      "summary": "",
+      "url": "https://globalchange.vt.edu/faculty/affiliated/shirzaei-manoochehr.html",
+      "matched_kw": "water resources, groundwater",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-05 16:52:45",
+      "updated_at": "2026-09-05 16:52:45"
+    }
+  ]
 }
