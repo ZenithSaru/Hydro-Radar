@@ -30,6 +30,15 @@
   .card p { margin: 0; font-size: 0.88rem; line-height: 1.4; color: #c7d1da; }
   .score { display: inline-block; background: rgba(79,179,217,0.15); color: var(--accent);
            border-radius: 6px; padding: 1px 8px; font-weight: 600; font-size: 0.8rem; margin-right: 8px; }
+  .ref { display: inline-block; color: var(--muted); font-size: 0.8rem; margin-right: 8px; }
+  .badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-weight: 600; font-size: 0.78rem; margin-right: 8px; text-transform: capitalize; }
+  .badge-new { background: rgba(139,152,165,0.18); color: var(--muted); }
+  .badge-interested { background: rgba(79,179,217,0.18); color: var(--accent); }
+  .badge-applied { background: rgba(217,162,79,0.18); color: var(--warn); }
+  .badge-interview { background: rgba(217,162,79,0.28); color: var(--warn); }
+  .badge-offer { background: rgba(76,175,125,0.2); color: var(--good); }
+  .badge-rejected { background: rgba(217,79,79,0.18); color: #d94f4f; }
+  .badge-skip { background: rgba(139,152,165,0.1); color: var(--muted); }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .empty { color: var(--muted); padding: 40px 0; text-align: center; }
@@ -56,6 +65,7 @@
 
 <script>
 const TABS = [
+  { key: "pipeline", label: "Pipeline", render: renderPipeline },
   { key: "opportunities", label: "Opportunities", render: renderOpportunity },
   { key: "recruitment_signals", label: "Recruiting Professors", render: renderSignal },
   { key: "awards", label: "Funding Analytics", render: renderAward },
@@ -125,6 +135,20 @@ function card(scoreVal, titleHtml, metaHtml, bodyText, linkUrl) {
 }
 
 function esc(s) { return (s || "").toString().replace(/</g, "&lt;"); }
+
+function renderPipeline(p) {
+  const div = document.createElement("div");
+  div.className = "card";
+  const notes = p.notes ? `<p style="margin-top:6px">📝 ${esc(p.notes)}</p>` : "";
+  div.innerHTML = `
+    <h3><span class="ref">#${p.ref_id}</span><span class="badge badge-${esc(p.status)}">${esc(p.status)}</span>${esc(p.title)}</h3>
+    <div class="meta">${esc(p.institution) || ""} ${p.pi_name ? "· PI: " + esc(p.pi_name) : ""} · source: ${esc(p.source_type)} · updated ${esc(p.updated_at)}</div>
+    ${p.summary ? `<p>${esc(p.summary).slice(0, 220)}</p>` : ""}
+    ${notes}
+    <p style="margin-top:8px">${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">Open ↗</a> · ` : ""}<span style="color:var(--muted)">reply <code>/draft ${p.ref_id}</code> or <code>/status ${p.ref_id} &lt;status&gt;</code> on Telegram</span></p>
+  `;
+  return div;
+}
 
 function renderOpportunity(o) {
   return card(o.score, esc(o.title), `${esc(o.institution)} ${o.position_type ? "· " + esc(o.position_type) : ""} · matched: ${esc(o.matched_kw)}`,
