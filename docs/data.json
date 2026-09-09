@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T17:07:57.412438Z",
+  "generated_at": "2026-09-09T17:04:53.664365Z",
   "awards": [
     {
       "award_id": "2544049",
@@ -127,6 +127,22 @@
       "matched_kw": "groundwater",
       "score": 45,
       "first_seen": "2026-09-05 08:19:46",
+      "notified": 1
+    },
+    {
+      "award_id": "2534958",
+      "title": "EPSCoR Graduate Fellowship Program (EGFP): Experiential Learning and Workforce Training in the Atmospheric, Environmental, and Disaster Sciences",
+      "institution": "Western Kentucky University",
+      "pi_name": "Zachary Suriano",
+      "amount_usd": 1113000,
+      "program": "04002627DB NSF STEM Education; 01002627DB NSF RESEARCH & RELATED ACTIVIT",
+      "start_date": "03/15/2027",
+      "awarded_date": "09/08/2026",
+      "abstract": "The National Science Foundation (NSF), NSF EPSCoR Graduate Fellowship Program (EGFP) supports EGFP designated institutions/programs in EPSCoR jurisdictions by providing funding for graduate fellowships for eligible applicants. Institutions receive a total of three years of stipend and associated cost-of-education (COE) allowance for each NSF EPSCoR Graduate Fellow.\r\n\r\nThis award at the Western Kentucky University\u00a0seeks to enhance research competitiveness and capacity through an investment in talent development.  Research topics and activities will focus on the recruitment and retention of graduate students to conduct transformative community- and industry-responsive research. The integration of research efforts with communities and industries aids in ensuring robust collaborations and greatly increases the ability for novel research with societal impact to be undertaken by students. This award will enhance the efforts of WKU in becoming a national leader in research-to-operations student experiences while training the next generation STEM workforce. Graduate Fellows will join programs within WKU\u2019s Department of Earth, Environmental, and Atmospheric Sciences (EEAS) addressing research in the earth system and resiliency in the face of physical hazards. Fellows and faculty mentors will undertake research that will improve knowledge in how dynamical interactions between atmospheric scales influences high-impact weather in observational and modeled environments, how environments have varied or changed in the geologic past, how water resources are impacted by cyclicity, and how contemporary computational strategies, such as artificial intelligence, can aid communities in preparedness for physical and cascading hazards. Fellows supported by this award will have a robust and supportive environment for completing their programs and gaining critical professional development skills for their careers.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2534958",
+      "matched_kw": "water resources",
+      "score": 45,
+      "first_seen": "2026-09-09 17:03:32",
       "notified": 1
     },
     {
@@ -308,7 +324,7 @@
       "page_title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
       "content_hash": "dc6ff50d91aaa54dd0ed38f9fb9bc324d29a2768a47cfe80f81d1c012df84049",
       "first_seen": "2026-09-05 16:53:04",
-      "last_checked": "2026-09-08 17:07:56",
+      "last_checked": "2026-09-09 17:04:49",
       "last_changed": "2026-09-05 16:53:04",
       "notified": 1
     },
@@ -319,7 +335,7 @@
       "page_title": "Belize Lane | Utah Water Research Laboratory | USU",
       "content_hash": "82b34ac6702760b8ab4c9feed54e4c1aad7bf9a4bdf0067341d2db86bfca9615",
       "first_seen": "2026-09-05 16:52:58",
-      "last_checked": "2026-09-08 17:07:51",
+      "last_checked": "2026-09-09 17:04:44",
       "last_changed": "2026-09-05 16:52:58",
       "notified": 1
     },
@@ -330,7 +346,7 @@
       "page_title": "David Rosenberg | Utah Water Research Laboratory | USU",
       "content_hash": "824a75b191f0ee6800fe3700b82cfad5ea652e1271f8aacf8278dfccce9cd494",
       "first_seen": "2026-09-05 16:52:56",
-      "last_checked": "2026-09-08 17:07:49",
+      "last_checked": "2026-09-09 17:04:42",
       "last_changed": "2026-09-05 16:52:56",
       "notified": 1
     },
@@ -341,7 +357,7 @@
       "page_title": "Bethany Neilson | Utah Water Research Laboratory | USU",
       "content_hash": "6ab817d3c358bc8ca826fae951f3a01011ccd9eaeb93978774cdad1e1f3054c8",
       "first_seen": "2026-09-05 16:52:52",
-      "last_checked": "2026-09-08 17:07:47",
+      "last_checked": "2026-09-09 17:04:39",
       "last_changed": "2026-09-05 16:52:52",
       "notified": 1
     },
@@ -352,7 +368,7 @@
       "page_title": "Faculty | Utah Water Research Laboratory | USU",
       "content_hash": "7e2b6e5beaa5d0420026559e719d9e14a84f5193d2b4e8ed23d5cd71d99e15f6",
       "first_seen": "2026-09-05 16:52:47",
-      "last_checked": "2026-09-08 17:07:43",
+      "last_checked": "2026-09-09 17:04:34",
       "last_changed": "2026-09-05 16:52:47",
       "notified": 1
     },
@@ -363,7 +379,7 @@
       "page_title": "Active Tectonics at UC Berkeley",
       "content_hash": "120e6bdde75d53766c3eac7ceb502175fdfbdef8bea8391e7d60854e53567946",
       "first_seen": "2026-09-05 16:52:46",
-      "last_checked": "2026-09-08 17:07:42",
+      "last_checked": "2026-09-09 17:04:33",
       "last_changed": "2026-09-05 16:52:46",
       "notified": 1
     },
@@ -374,13 +390,24 @@
       "page_title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
       "content_hash": "81f595843f60a2f9021b671979b68e63a7e798b52614fd4e3c984c21ea39a9a2",
       "first_seen": "2026-09-05 16:52:45",
-      "last_checked": "2026-09-08 17:07:42",
+      "last_checked": "2026-09-09 17:04:32",
       "last_changed": "2026-09-05 16:52:45",
       "notified": 1
     }
   ],
   "discovered_urls": [],
   "recruitment_signals": [
+    {
+      "pi_name": "Zachary Suriano",
+      "institution": "Western Kentucky University",
+      "award_id": "2534958",
+      "award_date": "09/08/2026",
+      "amount_usd": 1113000,
+      "publication_count": 14,
+      "recruiting_score": 90,
+      "first_seen": "2026-09-09 17:04:52",
+      "notified": 1
+    },
     {
       "pi_name": "Shideh Dashti",
       "institution": "University of Colorado at Boulder",
@@ -526,6 +553,38 @@
     }
   ],
   "pipeline": [
+    {
+      "ref_id": 9,
+      "source_type": "recruitment_signal",
+      "source_key": "Zachary Suriano|Western Kentucky University|2534958",
+      "title": "Recruiting signal: Zachary Suriano @ Western Kentucky University",
+      "institution": "Western Kentucky University",
+      "pi_name": "Zachary Suriano",
+      "contact_email": "",
+      "summary": "Recent award of $1,113,000 on 09/08/2026",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2534958",
+      "matched_kw": "",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-09 17:04:52",
+      "updated_at": "2026-09-09 17:04:52"
+    },
+    {
+      "ref_id": 8,
+      "source_type": "nsf_award",
+      "source_key": "2534958",
+      "title": "EPSCoR Graduate Fellowship Program (EGFP): Experiential Learning and Workforce Training in the Atmospheric, Environmental, and Disaster Sciences",
+      "institution": "Western Kentucky University",
+      "pi_name": "Zachary Suriano",
+      "contact_email": "",
+      "summary": "The National Science Foundation (NSF), NSF EPSCoR Graduate Fellowship Program (EGFP) supports EGFP designated institutions/programs in EPSCoR jurisdictions by providing funding for graduate fellowships for eligible applicants. Institutions receive a total of three years of stipend and associated cost-of-education (COE) allowance for each NSF EPSCoR Graduate Fellow.\r\n\r\nThis award at the Western Kentucky University\u00a0seeks to enhance research competitiveness and capacity through an investment in talent development.  Research topics and activities will focus on the recruitment and retention of graduate students to conduct transformative community- and industry-responsive research. The integration of research efforts with communities and industries aids in ensuring robust collaborations and greatly increases the ability for novel research with societal impact to be undertaken by students. This award will enhance the efforts of WKU in becoming a national leader in research-to-operations student experiences while training the next generation STEM workforce. Graduate Fellows will join programs within WKU\u2019s Department of Earth, Environmental, and Atmospheric Sciences (EEAS) addressing research in the earth system and resiliency in the face of physical hazards. Fellows and faculty mentors will undertake research that will improve knowledge in how dynamical interactions between atmospheric scales influences high-impact weather in observational and modeled environments, how environments have varied or changed in the geologic past, how water resources are impacted by cyclicity, and how contemporary computational strategies, such as artificial intelligence, can aid communities in preparedness for physical and cascading hazards. Fellows supported by this award will have a robust and supportive environment for completing their programs and gaining critical professional development skills for their careers.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2534958",
+      "matched_kw": "water resources",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-09 17:04:25",
+      "updated_at": "2026-09-09 17:04:25"
+    },
     {
       "ref_id": 7,
       "source_type": "faculty",
