@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T17:32:08.481851Z",
+  "generated_at": "2026-09-16T17:32:47.379851Z",
   "awards": [
     {
       "award_id": "2544049",
@@ -318,13 +318,24 @@
   ],
   "faculty": [
     {
+      "source_url": "https://uwrl.usu.edu/people/faculty/",
+      "emails": " steve.barfuss@usu.edu, alfonso.torres@usu.edu, belize.lane@usu.edu, bethany.neilson@usu.edu, blake.tullis@usu.edu, brian.crookston@usu.edu, burdette.barker@usu.edu, colin.phillips@usu.edu, courtney.flint@usu.edu, daeha.kim@gmail.edu, david.rosenberg@usu.edu, david.tarboton@usu.edu, emma.payne@usu.edu, jeff.horsburgh@usu.edu, joan.mclean@usu.edu, kyle.moor@usu.edu, liyuan.hou@usu.edu, michael.johnson@usu.edu, michael.mcfarland@usu.edu, pin.shuai@usu.edu, randy.martin@usu.edu, ron.sims@usu.edu, ryan.dupont@usu.edu, sierra.young@usu.edu, steve.barfuss@usu.edu, yiming.su@usu.edu, zac.sharp@usu.edu",
+      "matched_kw": "water resources, groundwater",
+      "page_title": "Faculty | Utah Water Research Laboratory | USU",
+      "content_hash": "f1053171b6bd04ae73a8f142017ea35709983db2874823e4b432c51b41415e81",
+      "first_seen": "2026-09-05 16:52:47",
+      "last_checked": "2026-09-16 17:32:24",
+      "last_changed": "2026-09-16 17:32:24",
+      "notified": 1
+    },
+    {
       "source_url": "https://uwrl.usu.edu/people/faculty/torres-alfonso",
       "emails": "alfonso.torres@usu.edu",
       "matched_kw": "water resources, watershed",
       "page_title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
       "content_hash": "dc6ff50d91aaa54dd0ed38f9fb9bc324d29a2768a47cfe80f81d1c012df84049",
       "first_seen": "2026-09-05 16:53:04",
-      "last_checked": "2026-09-15 17:32:07",
+      "last_checked": "2026-09-16 17:32:44",
       "last_changed": "2026-09-05 16:53:04",
       "notified": 1
     },
@@ -335,7 +346,7 @@
       "page_title": "Belize Lane | Utah Water Research Laboratory | USU",
       "content_hash": "82b34ac6702760b8ab4c9feed54e4c1aad7bf9a4bdf0067341d2db86bfca9615",
       "first_seen": "2026-09-05 16:52:58",
-      "last_checked": "2026-09-15 17:32:00",
+      "last_checked": "2026-09-16 17:32:36",
       "last_changed": "2026-09-05 16:52:58",
       "notified": 1
     },
@@ -346,7 +357,7 @@
       "page_title": "David Rosenberg | Utah Water Research Laboratory | USU",
       "content_hash": "824a75b191f0ee6800fe3700b82cfad5ea652e1271f8aacf8278dfccce9cd494",
       "first_seen": "2026-09-05 16:52:56",
-      "last_checked": "2026-09-15 17:31:57",
+      "last_checked": "2026-09-16 17:32:34",
       "last_changed": "2026-09-05 16:52:56",
       "notified": 1
     },
@@ -357,19 +368,8 @@
       "page_title": "Bethany Neilson | Utah Water Research Laboratory | USU",
       "content_hash": "6ab817d3c358bc8ca826fae951f3a01011ccd9eaeb93978774cdad1e1f3054c8",
       "first_seen": "2026-09-05 16:52:52",
-      "last_checked": "2026-09-15 17:31:54",
+      "last_checked": "2026-09-16 17:32:30",
       "last_changed": "2026-09-05 16:52:52",
-      "notified": 1
-    },
-    {
-      "source_url": "https://uwrl.usu.edu/people/faculty/",
-      "emails": " steve.barfuss@usu.edu, alfonso.torres@usu.edu, belize.lane@usu.edu, bethany.neilson@usu.edu, blake.tullis@usu.edu, brian.crookston@usu.edu, burdette.barker@usu.edu, colin.phillips@usu.edu, courtney.flint@usu.edu, david.rosenberg@usu.edu, david.tarboton@usu.edu, emma.payne@usu.edu, jeff.horsburgh@usu.edu, joan.mclean@usu.edu, kyle.moor@usu.edu, liyuan.hou@usu.edu, michael.johnson@usu.edu, michael.mcfarland@usu.edu, pin.shuai@usu.edu, randy.martin@usu.edu, ron.sims@usu.edu, ryan.dupont@usu.edu, sierra.young@usu.edu, steve.barfuss@usu.edu, yiming.su@usu.edu, zac.sharp@usu.edu",
-      "matched_kw": "water resources, groundwater",
-      "page_title": "Faculty | Utah Water Research Laboratory | USU",
-      "content_hash": "7e2b6e5beaa5d0420026559e719d9e14a84f5193d2b4e8ed23d5cd71d99e15f6",
-      "first_seen": "2026-09-05 16:52:47",
-      "last_checked": "2026-09-15 17:31:48",
-      "last_changed": "2026-09-05 16:52:47",
       "notified": 1
     },
     {
@@ -379,7 +379,7 @@
       "page_title": "Active Tectonics at UC Berkeley",
       "content_hash": "120e6bdde75d53766c3eac7ceb502175fdfbdef8bea8391e7d60854e53567946",
       "first_seen": "2026-09-05 16:52:46",
-      "last_checked": "2026-09-15 17:31:47",
+      "last_checked": "2026-09-16 17:32:23",
       "last_changed": "2026-09-05 16:52:46",
       "notified": 1
     },
@@ -390,7 +390,7 @@
       "page_title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
       "content_hash": "81f595843f60a2f9021b671979b68e63a7e798b52614fd4e3c984c21ea39a9a2",
       "first_seen": "2026-09-05 16:52:45",
-      "last_checked": "2026-09-15 17:31:47",
+      "last_checked": "2026-09-16 17:32:23",
       "last_changed": "2026-09-05 16:52:45",
       "notified": 1
     }
@@ -553,6 +553,22 @@
     }
   ],
   "pipeline": [
+    {
+      "ref_id": 10,
+      "source_type": "faculty",
+      "source_key": "https://uwrl.usu.edu/people/faculty/",
+      "title": "Faculty | Utah Water Research Laboratory | USU",
+      "institution": "",
+      "pi_name": "",
+      "contact_email": " steve.barfuss@usu.edu, alfonso.torres@usu.edu, belize.lane@usu.edu, bethany.neilson@usu.edu, blake.tullis@usu.edu, brian.crookston@usu.edu, burdette.barker@usu.edu, colin.phillips@usu.edu, courtney.flint@usu.edu, daeha.kim@gmail.edu, david.rosenberg@usu.edu, david.tarboton@usu.edu, emma.payne@usu.edu, jeff.horsburgh@usu.edu, joan.mclean@usu.edu, kyle.moor@usu.edu, liyuan.hou@usu.edu, michael.johnson@usu.edu, michael.mcfarland@usu.edu, pin.shuai@usu.edu, randy.martin@usu.edu, ron.sims@usu.edu, ryan.dupont@usu.edu, sierra.young@usu.edu, steve.barfuss@usu.edu, yiming.su@usu.edu, zac.sharp@usu.edu",
+      "summary": "",
+      "url": "https://uwrl.usu.edu/people/faculty/",
+      "matched_kw": "water resources, groundwater",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-16 17:32:24",
+      "updated_at": "2026-09-16 17:32:24"
+    },
     {
       "ref_id": 9,
       "source_type": "recruitment_signal",
