@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:34:30.969622Z",
+  "generated_at": "2026-09-23T17:46:32.064240Z",
   "awards": [
     {
       "award_id": "2544049",
@@ -15,6 +15,22 @@
       "matched_kw": "hydrologic, groundwater",
       "score": 85,
       "first_seen": "2026-09-05 08:19:27",
+      "notified": 1
+    },
+    {
+      "award_id": "2640152",
+      "title": "CAREER: Understanding the dynamics and predictability of land-to-aquatic nitrogen loading under climate extremes by combining deep learning with process-based modeling",
+      "institution": "University of Wisconsin-Madison",
+      "pi_name": "Chaoqun Lu",
+      "amount_usd": 153129,
+      "program": "01002324DB NSF RESEARCH & RELATED ACTIVIT; 01002223DB NSF RESEARCH & RELATED ACTIVIT; 01002425DB NSF RESEARCH & RELATED ACTIVIT",
+      "start_date": "11/01/2026",
+      "awarded_date": "09/22/2026",
+      "abstract": "Increases in global crop yield largely rely on nitrogen (N) fertilizer input. However, excessive N applications on land have profoundly impacted aquatic ecosystems, leading to eutrophication, hypoxia (dead zones), and harmful algal blooms (HABs) in estuarine and near-shore seas. Despite great progress in understanding N transport in hydrologic systems, challenges still exist in effectively managing water quality under hydroclimate extremes (mainly drought and floods). This project addresses a fundamental issue in hydrology and Earth system science: How varied are river N loads in response to climate extremes, and why? The project focuses on the Upper Mississippi-Ohio River Basin (UMORB), a region contributing over 50% of the U.S. corn and soybean production, and 45% of the N flux from the Mississippi-Atchafalaya River Basin to the Gulf of Mexico. Research outcomes from this project will improve understanding of how the fate of N is altered by natural perturbation and human management in upstream land ecosystems and will bring new insights for reducing N loads from land to rivers to coastal oceans under more frequent climate extremes in the future. It will result in the development of novel Earth system models and lay a solid foundation for \u201cclimate-smart\u201d water management. The project will bridge a gap between science and practice and disseminate the most current knowledge of Earth system modeling to the public. The team will develop a Monitoring-to-Modeling (M2M) learning platform, featuring an online watershed game of \u201cchoice and chance,\u201d to make the complex concept of watershed management more concrete for the next-generation of scientists, land managers, policy makers, and voters.\r\n\r\nThe overarching goal of the research is to understand, quantify and predict how land-to-aquatic N loadings respond to hydroclimate extremes. This project will blend data-driven deep learning approaches with process-based Hydro-Ecological modeling to characterize and represent cross- scale climate sensitivity of N loadings and predict the mitigation range of hydrological N loss across the landscape. The investigators will synthesize extensive high-frequency water quality monitoring data, remote sensing images, as well as the time-series geospatial data of land use and management history in the Midwestern U.S. to unravel the mechanisms underlying N flow resilience to various extreme events. The hybrid deep learning-process based modeling framework will build up our predictive capability for the dynamics of hydrological N movement in a coupled human and natural system. The hybrid model will then be applied to assess how effective watershed management practices are, what is a reasonable N load reduction goal to be sought in the field to reach the goal of reducing hypoxia extent in the Gulf with consideration of extreme climate events, and where are holes in \u201cthe leaky bucket.\u201d\r\n\r\nThis project is jointly funded by Hydrologic Sciences and the Established Program to Stimulate Competitive Research (EPSCoR).\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2640152",
+      "matched_kw": "hydrology, hydrologic, watershed",
+      "score": 70,
+      "first_seen": "2026-09-23 17:44:42",
       "notified": 1
     },
     {
@@ -340,7 +356,7 @@
       "page_title": "Faculty | Utah Water Research Laboratory | USU",
       "content_hash": "f1053171b6bd04ae73a8f142017ea35709983db2874823e4b432c51b41415e81",
       "first_seen": "2026-09-05 16:52:47",
-      "last_checked": "2026-09-22 17:34:10",
+      "last_checked": "2026-09-23 17:46:15",
       "last_changed": "2026-09-16 17:32:24",
       "notified": 1
     },
@@ -351,7 +367,7 @@
       "page_title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
       "content_hash": "dc6ff50d91aaa54dd0ed38f9fb9bc324d29a2768a47cfe80f81d1c012df84049",
       "first_seen": "2026-09-05 16:53:04",
-      "last_checked": "2026-09-22 17:34:29",
+      "last_checked": "2026-09-23 17:46:28",
       "last_changed": "2026-09-05 16:53:04",
       "notified": 1
     },
@@ -362,7 +378,7 @@
       "page_title": "Belize Lane | Utah Water Research Laboratory | USU",
       "content_hash": "82b34ac6702760b8ab4c9feed54e4c1aad7bf9a4bdf0067341d2db86bfca9615",
       "first_seen": "2026-09-05 16:52:58",
-      "last_checked": "2026-09-22 17:34:23",
+      "last_checked": "2026-09-23 17:46:23",
       "last_changed": "2026-09-05 16:52:58",
       "notified": 1
     },
@@ -373,7 +389,7 @@
       "page_title": "David Rosenberg | Utah Water Research Laboratory | USU",
       "content_hash": "824a75b191f0ee6800fe3700b82cfad5ea652e1271f8aacf8278dfccce9cd494",
       "first_seen": "2026-09-05 16:52:56",
-      "last_checked": "2026-09-22 17:34:21",
+      "last_checked": "2026-09-23 17:46:21",
       "last_changed": "2026-09-05 16:52:56",
       "notified": 1
     },
@@ -384,7 +400,7 @@
       "page_title": "Bethany Neilson | Utah Water Research Laboratory | USU",
       "content_hash": "6ab817d3c358bc8ca826fae951f3a01011ccd9eaeb93978774cdad1e1f3054c8",
       "first_seen": "2026-09-05 16:52:52",
-      "last_checked": "2026-09-22 17:34:16",
+      "last_checked": "2026-09-23 17:46:18",
       "last_changed": "2026-09-05 16:52:52",
       "notified": 1
     },
@@ -395,7 +411,7 @@
       "page_title": "Active Tectonics at UC Berkeley",
       "content_hash": "120e6bdde75d53766c3eac7ceb502175fdfbdef8bea8391e7d60854e53567946",
       "first_seen": "2026-09-05 16:52:46",
-      "last_checked": "2026-09-22 17:34:09",
+      "last_checked": "2026-09-23 17:46:14",
       "last_changed": "2026-09-05 16:52:46",
       "notified": 1
     },
@@ -406,7 +422,7 @@
       "page_title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
       "content_hash": "81f595843f60a2f9021b671979b68e63a7e798b52614fd4e3c984c21ea39a9a2",
       "first_seen": "2026-09-05 16:52:45",
-      "last_checked": "2026-09-22 17:34:08",
+      "last_checked": "2026-09-23 17:46:13",
       "last_changed": "2026-09-05 16:52:45",
       "notified": 1
     }
@@ -546,6 +562,17 @@
       "notified": 1
     },
     {
+      "pi_name": "Chaoqun Lu",
+      "institution": "University of Wisconsin-Madison",
+      "award_id": "2640152",
+      "award_date": "09/22/2026",
+      "amount_usd": 153129,
+      "publication_count": null,
+      "recruiting_score": 40,
+      "first_seen": "2026-09-23 17:46:30",
+      "notified": 1
+    },
+    {
       "pi_name": "Zach Perzan",
       "institution": "University of Nevada Las Vegas",
       "award_id": "2624541",
@@ -580,6 +607,38 @@
     }
   ],
   "pipeline": [
+    {
+      "ref_id": 14,
+      "source_type": "recruitment_signal",
+      "source_key": "Chaoqun Lu|University of Wisconsin-Madison|2640152",
+      "title": "Recruiting signal: Chaoqun Lu @ University of Wisconsin-Madison",
+      "institution": "University of Wisconsin-Madison",
+      "pi_name": "Chaoqun Lu",
+      "contact_email": "",
+      "summary": "Recent award of $153,129 on 09/22/2026",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2640152",
+      "matched_kw": "",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-23 17:46:30",
+      "updated_at": "2026-09-23 17:46:30"
+    },
+    {
+      "ref_id": 13,
+      "source_type": "nsf_award",
+      "source_key": "2640152",
+      "title": "CAREER: Understanding the dynamics and predictability of land-to-aquatic nitrogen loading under climate extremes by combining deep learning with process-based modeling",
+      "institution": "University of Wisconsin-Madison",
+      "pi_name": "Chaoqun Lu",
+      "contact_email": "",
+      "summary": "Increases in global crop yield largely rely on nitrogen (N) fertilizer input. However, excessive N applications on land have profoundly impacted aquatic ecosystems, leading to eutrophication, hypoxia (dead zones), and harmful algal blooms (HABs) in estuarine and near-shore seas. Despite great progress in understanding N transport in hydrologic systems, challenges still exist in effectively managing water quality under hydroclimate extremes (mainly drought and floods). This project addresses a fundamental issue in hydrology and Earth system science: How varied are river N loads in response to climate extremes, and why? The project focuses on the Upper Mississippi-Ohio River Basin (UMORB), a region contributing over 50% of the U.S. corn and soybean production, and 45% of the N flux from the Mississippi-Atchafalaya River Basin to the Gulf of Mexico. Research outcomes from this project will improve understanding of how the fate of N is altered by natural perturbation and human management in upstream land ecosystems and will bring new insights for reducing N loads from land to rivers to coastal oceans under more frequent climate extremes in the future. It will result in the development of novel Earth system models and lay a solid foundation for \u201cclimate-smart\u201d water management. The project will bridge a gap between science and practice and disseminate the most current knowledge of Earth system modeling to the public. The team will develop a Monitoring-to-Modeling (M2M) learning platform, featuring an online watershed game of \u201cchoice and chance,\u201d to make the complex concept of watershed management more concrete for the next-generation of scientists, land managers, policy makers, and voters.\r\n\r\nThe overarching goal of the research is to understand, quantify and predict how land-to-aquatic N loadings respond to hydroclimate extremes. This project will blend data-driven deep learning approaches with process-based Hydro-Ecological modeling to characterize and represent cross- scale climate sensitivity of N loadings and predict the mitigation range of hydrological N loss across the landscape. The investigators will synthesize extensive high-frequency water quality monitoring data, remote sensing images, as well as the time-series geospatial data of land use and management history in the Midwestern U.S. to unravel the mechanisms underlying N flow resilience to various extreme events. The hybrid deep learning-process based modeling framework will build up our predictive capability for the dynamics of hydrological N movement in a coupled human and natural system. The hybrid model will then be applied to assess how effective watershed management practices are, what is a reasonable N load reduction goal to be sought in the field to reach the goal of reducing hypoxia extent in the Gulf with consideration of extreme climate events, and where are holes in \u201cthe leaky bucket.\u201d\r\n\r\nThis project is jointly funded by Hydrologic Sciences and the Established Program to Stimulate Competitive Research (EPSCoR).\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2640152",
+      "matched_kw": "hydrology, hydrologic, watershed",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-09-23 17:46:07",
+      "updated_at": "2026-09-23 17:46:07"
+    },
     {
       "ref_id": 12,
       "source_type": "recruitment_signal",
