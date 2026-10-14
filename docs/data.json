@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T19:48:27.327803Z",
+  "generated_at": "2026-10-14T17:50:47.105414Z",
   "awards": [
     {
       "award_id": "2544049",
@@ -274,6 +274,22 @@
       "notified": 1
     },
     {
+      "award_id": "2644117",
+      "title": "Collaborative Research: CAIG: Emulating Water Isotopes in Fully-coupled Global Climate Models using Knowledge-guided Machine Learning",
+      "institution": "Rutgers University New Brunswick",
+      "pi_name": "Xiaowei Jia",
+      "amount_usd": 383203,
+      "program": "01002526DB NSF RESEARCH & RELATED ACTIVIT",
+      "start_date": "10/15/2026",
+      "awarded_date": "10/13/2026",
+      "abstract": "Deep inside every drop of water lie tiny signatures from rare forms of hydrogen and oxygen, known as isotopes. These isotopes contain different numbers of neutrons and act like nature\u2019s recorder, revealing where water vapor came from and how it traveled across the globe and formed precipitation. Sensitive to both temperature and humidity along their pathways, these isotopes are stored in natural archives such as ice cores, lake beds, and cave formations. Scientists can read them like time capsules, unlocking stories of Earth\u2019s past climate: how hot it was, how much it rained, and how climate patterns shifted over thousands of years. These records also help scientists evaluate and improve water cycles in climate models, offering insights into how our planet may change in the future. However, adding isotopes into today\u2019s complex climate models requires cutting-edge scientific and engineering expertise and vast amounts of computing power. The goal of this project is to build a smart shortcut based on machine learning: an \u201cemulator\u201d that can predict water isotope patterns from climate variables in existing climate simulations quickly and efficiently. This is a powerful step forward for climate science, hydrology, and understanding our planet\u2019s past and future. The project fosters interdisciplinary collaboration between climate scientists and AI experts. Its success could lead to new ways of modeling other passive tracers in the Earth system. The project products such as code and data will be open to the community, and results will be shared through university courses, training programs, and K-12 outreach at NSF NCAR, Pitt, and UMD.\r\n\r\nUsing simulations from fully-coupled global climate models (GCMs) with isotope capabilities, such as the isotope-enabled Community Earth System Model (iCESM1), this project aims to build a machine-learning-based emulator that learns a mapping from climate fields to water isotope fields. This mapping can then be applied to other GCMs that lack built-in isotope capabilities, enabling cost-efficient generation of isotopic outputs. Scientifically, the project will improve understanding of the leading drivers of isotopic variability, enhance model\u2013data comparison using both modern and paleoclimate observations, and support isotope-enabled climate model development. It also contributes to ongoing (paleo)climate data assimilation efforts in the broader community, where the lack of isotopic prior simulations has been a limiting factor.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2644117",
+      "matched_kw": "hydrology",
+      "score": 30,
+      "first_seen": "2026-10-14 17:49:33",
+      "notified": 1
+    },
+    {
       "award_id": "2624310",
       "title": "EPSCoR Research Fellows: @NASA: Calibrating NISAR to in situ soli & live fuel moisture sensors for wildfire risk",
       "institution": "University of New Mexico",
@@ -356,7 +372,7 @@
       "page_title": "Faculty | Utah Water Research Laboratory | USU",
       "content_hash": "03b0be9308ae1e5c9e98e0945e3110e81e198bc223082557ea10bdefc4796eaf",
       "first_seen": "2026-09-05 16:52:47",
-      "last_checked": "2026-10-13 19:48:09",
+      "last_checked": "2026-10-14 17:50:25",
       "last_changed": "2026-09-28 20:02:20",
       "notified": 1
     },
@@ -367,7 +383,7 @@
       "page_title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
       "content_hash": "dc6ff50d91aaa54dd0ed38f9fb9bc324d29a2768a47cfe80f81d1c012df84049",
       "first_seen": "2026-09-05 16:53:04",
-      "last_checked": "2026-10-13 19:48:26",
+      "last_checked": "2026-10-14 17:50:43",
       "last_changed": "2026-09-05 16:53:04",
       "notified": 1
     },
@@ -378,7 +394,7 @@
       "page_title": "Belize Lane | Utah Water Research Laboratory | USU",
       "content_hash": "82b34ac6702760b8ab4c9feed54e4c1aad7bf9a4bdf0067341d2db86bfca9615",
       "first_seen": "2026-09-05 16:52:58",
-      "last_checked": "2026-10-13 19:48:20",
+      "last_checked": "2026-10-14 17:50:36",
       "last_changed": "2026-09-05 16:52:58",
       "notified": 1
     },
@@ -389,7 +405,7 @@
       "page_title": "David Rosenberg | Utah Water Research Laboratory | USU",
       "content_hash": "824a75b191f0ee6800fe3700b82cfad5ea652e1271f8aacf8278dfccce9cd494",
       "first_seen": "2026-09-05 16:52:56",
-      "last_checked": "2026-10-13 19:48:17",
+      "last_checked": "2026-10-14 17:50:33",
       "last_changed": "2026-09-05 16:52:56",
       "notified": 1
     },
@@ -400,7 +416,7 @@
       "page_title": "Bethany Neilson | Utah Water Research Laboratory | USU",
       "content_hash": "6ab817d3c358bc8ca826fae951f3a01011ccd9eaeb93978774cdad1e1f3054c8",
       "first_seen": "2026-09-05 16:52:52",
-      "last_checked": "2026-10-13 19:48:14",
+      "last_checked": "2026-10-14 17:50:30",
       "last_changed": "2026-09-05 16:52:52",
       "notified": 1
     },
@@ -411,7 +427,7 @@
       "page_title": "Active Tectonics at UC Berkeley",
       "content_hash": "120e6bdde75d53766c3eac7ceb502175fdfbdef8bea8391e7d60854e53567946",
       "first_seen": "2026-09-05 16:52:46",
-      "last_checked": "2026-10-13 19:48:08",
+      "last_checked": "2026-10-14 17:50:24",
       "last_changed": "2026-09-05 16:52:46",
       "notified": 1
     },
@@ -422,7 +438,7 @@
       "page_title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
       "content_hash": "81f595843f60a2f9021b671979b68e63a7e798b52614fd4e3c984c21ea39a9a2",
       "first_seen": "2026-09-05 16:52:45",
-      "last_checked": "2026-10-13 19:48:07",
+      "last_checked": "2026-10-14 17:50:23",
       "last_changed": "2026-09-05 16:52:45",
       "notified": 1
     }
@@ -529,6 +545,17 @@
       "notified": 1
     },
     {
+      "pi_name": "Xiaowei Jia",
+      "institution": "Rutgers University New Brunswick",
+      "award_id": "2644117",
+      "award_date": "10/13/2026",
+      "amount_usd": 383203,
+      "publication_count": 0,
+      "recruiting_score": 50,
+      "first_seen": "2026-10-14 17:50:45",
+      "notified": 1
+    },
+    {
       "pi_name": "Christopher Marsh",
       "institution": "University of New Mexico",
       "award_id": "2624310",
@@ -607,6 +634,38 @@
     }
   ],
   "pipeline": [
+    {
+      "ref_id": 17,
+      "source_type": "recruitment_signal",
+      "source_key": "Xiaowei Jia|Rutgers University New Brunswick|2644117",
+      "title": "Recruiting signal: Xiaowei Jia @ Rutgers University New Brunswick",
+      "institution": "Rutgers University New Brunswick",
+      "pi_name": "Xiaowei Jia",
+      "contact_email": "",
+      "summary": "Recent award of $383,203 on 10/13/2026",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2644117",
+      "matched_kw": "",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-10-14 17:50:45",
+      "updated_at": "2026-10-14 17:50:45"
+    },
+    {
+      "ref_id": 16,
+      "source_type": "nsf_award",
+      "source_key": "2644117",
+      "title": "Collaborative Research: CAIG: Emulating Water Isotopes in Fully-coupled Global Climate Models using Knowledge-guided Machine Learning",
+      "institution": "Rutgers University New Brunswick",
+      "pi_name": "Xiaowei Jia",
+      "contact_email": "",
+      "summary": "Deep inside every drop of water lie tiny signatures from rare forms of hydrogen and oxygen, known as isotopes. These isotopes contain different numbers of neutrons and act like nature\u2019s recorder, revealing where water vapor came from and how it traveled across the globe and formed precipitation. Sensitive to both temperature and humidity along their pathways, these isotopes are stored in natural archives such as ice cores, lake beds, and cave formations. Scientists can read them like time capsules, unlocking stories of Earth\u2019s past climate: how hot it was, how much it rained, and how climate patterns shifted over thousands of years. These records also help scientists evaluate and improve water cycles in climate models, offering insights into how our planet may change in the future. However, adding isotopes into today\u2019s complex climate models requires cutting-edge scientific and engineering expertise and vast amounts of computing power. The goal of this project is to build a smart shortcut based on machine learning: an \u201cemulator\u201d that can predict water isotope patterns from climate variables in existing climate simulations quickly and efficiently. This is a powerful step forward for climate science, hydrology, and understanding our planet\u2019s past and future. The project fosters interdisciplinary collaboration between climate scientists and AI experts. Its success could lead to new ways of modeling other passive tracers in the Earth system. The project products such as code and data will be open to the community, and results will be shared through university courses, training programs, and K-12 outreach at NSF NCAR, Pitt, and UMD.\r\n\r\nUsing simulations from fully-coupled global climate models (GCMs) with isotope capabilities, such as the isotope-enabled Community Earth System Model (iCESM1), this project aims to build a machine-learning-based emulator that learns a mapping from climate fields to water isotope fields. This mapping can then be applied to other GCMs that lack built-in isotope capabilities, enabling cost-efficient generation of isotopic outputs. Scientifically, the project will improve understanding of the leading drivers of isotopic variability, enhance model\u2013data comparison using both modern and paleoclimate observations, and support isotope-enabled climate model development. It also contributes to ongoing (paleo)climate data assimilation efforts in the broader community, where the lack of isotopic prior simulations has been a limiting factor.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2644117",
+      "matched_kw": "hydrology",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-10-14 17:50:18",
+      "updated_at": "2026-10-14 17:50:18"
+    },
     {
       "ref_id": 15,
       "source_type": "faculty",
