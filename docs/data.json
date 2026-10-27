@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T19:04:28.762794Z",
+  "generated_at": "2026-10-27T18:35:53.954763Z",
   "awards": [
     {
       "award_id": "2544049",
@@ -79,6 +79,38 @@
       "matched_kw": "hydrologic, water resources, watershed",
       "score": 55,
       "first_seen": "2026-09-05 08:19:33",
+      "notified": 1
+    },
+    {
+      "award_id": "2701997",
+      "title": "Collaborative Research: RAPID: Reconstructing the 2026 Langtang Ice Rock Collapse and Cascading Flood in the Himalayas: Hydraulics, Sediment Dynamics, and Hydrochemical Response",
+      "institution": "Kansas State University",
+      "pi_name": "Jeeban Panthi",
+      "amount_usd": 85939,
+      "program": "01002728DB NSF RESEARCH & RELATED ACTIVIT",
+      "start_date": "11/01/2026",
+      "awarded_date": "10/26/2026",
+      "abstract": "On August 26, 2026, a large mass of ice-rock collapsed near the Nepal\u2013China border and generated a rapidly evolving sequence of debris movement, river blockage, debris flow, and catastrophic downstream flooding. The event caused extensive loss of life and devastated settlements, bridges, roads, and power facilities along the river corridor. Large quantities of freshly fragmented rock, soil, and river sediment were mobilized, providing an opportunity to understand how cascading hazards alter the transport and transformation of water and sediment in complex, mountainous river systems. This project will rapidly collect and preserve evidence of flood levels and flow, changes to the landscape and river channel, sediment deposits, and water chemistry from the collapse site to downstream river sections. The resulting datasets and field-based case studies will support interdisciplinary training in hydrology, geomorphology, and geochemistry at participating U.S. and Nepalese universities. Results will also inform management of cascading hazards around the world.\r\n\r\nThis project will collect essential on-the-ground data to provide critical information on the ice-rock collapse and flood event that cannot be resolved from satellite observations. Field measurements will guide investigation of how sediment entrainment, temporary blockages, and channel confinement governed flood propagation, and how sediment provenance and water\u2013rock interactions influenced downstream hydrochemistry. Integrated flood-mark surveys, channel geometry, deposit characterization, and paired water\u2013sediment analyses will constrain event reconstruction and evaluation of coupled flow and sediment-transport models. Repeat sampling at fixed locations will characterize post-event hydrochemical evolution. Open data products will also support future cascading-hazard assessments and strengthen collaboration among researchers and hazard-management practitioners.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2701997",
+      "matched_kw": "hydrology",
+      "score": 55,
+      "first_seen": "2026-10-27 18:34:42",
+      "notified": 1
+    },
+    {
+      "award_id": "2701998",
+      "title": "Collaborative Research: RAPID: Reconstructing the 2026 Langtang Ice Rock Collapse and Cascading Flood in the Himalayas: Hydraulics, Sediment Dynamics, and Hydrochemical Response",
+      "institution": "Michigan State University",
+      "pi_name": "Yadu Pokhrel",
+      "amount_usd": 22900,
+      "program": "01002728DB NSF RESEARCH & RELATED ACTIVIT",
+      "start_date": "11/01/2026",
+      "awarded_date": "10/26/2026",
+      "abstract": "On August 26, 2026, a large mass of ice-rock collapsed near the Nepal\u2013China border and generated a rapidly evolving sequence of debris movement, river blockage, debris flow, and catastrophic downstream flooding. The event caused extensive loss of life and devastated settlements, bridges, roads, and power facilities along the river corridor. Large quantities of freshly fragmented rock, soil, and river sediment were mobilized, providing an opportunity to understand how cascading hazards alter the transport and transformation of water and sediment in complex, mountainous river systems. This project will rapidly collect and preserve evidence of flood levels and flow, changes to the landscape and river channel, sediment deposits, and water chemistry from the collapse site to downstream river sections. The resulting datasets and field-based case studies will support interdisciplinary training in hydrology, geomorphology, and geochemistry at participating U.S. and Nepalese universities. Results will also inform management of cascading hazards around the world.\r\n\r\nThis project will collect essential on-the-ground data to provide critical information on the ice-rock collapse and flood event that cannot be resolved from satellite observations. Field measurements will guide investigation of how sediment entrainment, temporary blockages, and channel confinement governed flood propagation, and how sediment provenance and water\u2013rock interactions influenced downstream hydrochemistry. Integrated flood-mark surveys, channel geometry, deposit characterization, and paired water\u2013sediment analyses will constrain event reconstruction and evaluation of coupled flow and sediment-transport models. Repeat sampling at fixed locations will characterize post-event hydrochemical evolution. Open data products will also support future cascading-hazard assessments and strengthen collaboration among researchers and hazard-management practitioners.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2701998",
+      "matched_kw": "hydrology",
+      "score": 55,
+      "first_seen": "2026-10-27 18:34:51",
       "notified": 1
     },
     {
@@ -372,7 +404,7 @@
       "page_title": "Faculty | Utah Water Research Laboratory | USU",
       "content_hash": "b6bc8d1ceb4aac1623629ed98ad6d7c11ae9569ea9aa9666eb5ebd52a4de2750",
       "first_seen": "2026-09-05 16:52:47",
-      "last_checked": "2026-10-26 19:04:13",
+      "last_checked": "2026-10-27 18:35:38",
       "last_changed": "2026-10-24 16:28:01",
       "notified": 1
     },
@@ -383,7 +415,7 @@
       "page_title": "Alfonso Torres-Rua | Utah Water Research Laboratory | USU",
       "content_hash": "dc6ff50d91aaa54dd0ed38f9fb9bc324d29a2768a47cfe80f81d1c012df84049",
       "first_seen": "2026-09-05 16:53:04",
-      "last_checked": "2026-10-26 19:04:27",
+      "last_checked": "2026-10-27 18:35:52",
       "last_changed": "2026-09-05 16:53:04",
       "notified": 1
     },
@@ -394,7 +426,7 @@
       "page_title": "Belize Lane | Utah Water Research Laboratory | USU",
       "content_hash": "82b34ac6702760b8ab4c9feed54e4c1aad7bf9a4bdf0067341d2db86bfca9615",
       "first_seen": "2026-09-05 16:52:58",
-      "last_checked": "2026-10-26 19:04:22",
+      "last_checked": "2026-10-27 18:35:48",
       "last_changed": "2026-09-05 16:52:58",
       "notified": 1
     },
@@ -405,7 +437,7 @@
       "page_title": "David Rosenberg | Utah Water Research Laboratory | USU",
       "content_hash": "824a75b191f0ee6800fe3700b82cfad5ea652e1271f8aacf8278dfccce9cd494",
       "first_seen": "2026-09-05 16:52:56",
-      "last_checked": "2026-10-26 19:04:20",
+      "last_checked": "2026-10-27 18:35:46",
       "last_changed": "2026-09-05 16:52:56",
       "notified": 1
     },
@@ -416,7 +448,7 @@
       "page_title": "Bethany Neilson | Utah Water Research Laboratory | USU",
       "content_hash": "6ab817d3c358bc8ca826fae951f3a01011ccd9eaeb93978774cdad1e1f3054c8",
       "first_seen": "2026-09-05 16:52:52",
-      "last_checked": "2026-10-26 19:04:17",
+      "last_checked": "2026-10-27 18:35:43",
       "last_changed": "2026-09-05 16:52:52",
       "notified": 1
     },
@@ -427,7 +459,7 @@
       "page_title": "Active Tectonics at UC Berkeley",
       "content_hash": "120e6bdde75d53766c3eac7ceb502175fdfbdef8bea8391e7d60854e53567946",
       "first_seen": "2026-09-05 16:52:46",
-      "last_checked": "2026-10-26 19:04:12",
+      "last_checked": "2026-10-27 18:35:38",
       "last_changed": "2026-09-05 16:52:46",
       "notified": 1
     },
@@ -438,7 +470,7 @@
       "page_title": "Dr. Manoochehr Shirzaei  | Global Change Center | Virginia Tech",
       "content_hash": "81f595843f60a2f9021b671979b68e63a7e798b52614fd4e3c984c21ea39a9a2",
       "first_seen": "2026-09-05 16:52:45",
-      "last_checked": "2026-10-26 19:04:11",
+      "last_checked": "2026-10-27 18:35:37",
       "last_changed": "2026-09-05 16:52:45",
       "notified": 1
     }
@@ -634,6 +666,38 @@
     }
   ],
   "pipeline": [
+    {
+      "ref_id": 19,
+      "source_type": "nsf_award",
+      "source_key": "2701997",
+      "title": "Collaborative Research: RAPID: Reconstructing the 2026 Langtang Ice Rock Collapse and Cascading Flood in the Himalayas: Hydraulics, Sediment Dynamics, and Hydrochemical Response",
+      "institution": "Kansas State University",
+      "pi_name": "Jeeban Panthi",
+      "contact_email": "",
+      "summary": "On August 26, 2026, a large mass of ice-rock collapsed near the Nepal\u2013China border and generated a rapidly evolving sequence of debris movement, river blockage, debris flow, and catastrophic downstream flooding. The event caused extensive loss of life and devastated settlements, bridges, roads, and power facilities along the river corridor. Large quantities of freshly fragmented rock, soil, and river sediment were mobilized, providing an opportunity to understand how cascading hazards alter the transport and transformation of water and sediment in complex, mountainous river systems. This project will rapidly collect and preserve evidence of flood levels and flow, changes to the landscape and river channel, sediment deposits, and water chemistry from the collapse site to downstream river sections. The resulting datasets and field-based case studies will support interdisciplinary training in hydrology, geomorphology, and geochemistry at participating U.S. and Nepalese universities. Results will also inform management of cascading hazards around the world.\r\n\r\nThis project will collect essential on-the-ground data to provide critical information on the ice-rock collapse and flood event that cannot be resolved from satellite observations. Field measurements will guide investigation of how sediment entrainment, temporary blockages, and channel confinement governed flood propagation, and how sediment provenance and water\u2013rock interactions influenced downstream hydrochemistry. Integrated flood-mark surveys, channel geometry, deposit characterization, and paired water\u2013sediment analyses will constrain event reconstruction and evaluation of coupled flow and sediment-transport models. Repeat sampling at fixed locations will characterize post-event hydrochemical evolution. Open data products will also support future cascading-hazard assessments and strengthen collaboration among researchers and hazard-management practitioners.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2701997",
+      "matched_kw": "hydrology",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-10-27 18:35:30",
+      "updated_at": "2026-10-27 18:35:30"
+    },
+    {
+      "ref_id": 20,
+      "source_type": "nsf_award",
+      "source_key": "2701998",
+      "title": "Collaborative Research: RAPID: Reconstructing the 2026 Langtang Ice Rock Collapse and Cascading Flood in the Himalayas: Hydraulics, Sediment Dynamics, and Hydrochemical Response",
+      "institution": "Michigan State University",
+      "pi_name": "Yadu Pokhrel",
+      "contact_email": "",
+      "summary": "On August 26, 2026, a large mass of ice-rock collapsed near the Nepal\u2013China border and generated a rapidly evolving sequence of debris movement, river blockage, debris flow, and catastrophic downstream flooding. The event caused extensive loss of life and devastated settlements, bridges, roads, and power facilities along the river corridor. Large quantities of freshly fragmented rock, soil, and river sediment were mobilized, providing an opportunity to understand how cascading hazards alter the transport and transformation of water and sediment in complex, mountainous river systems. This project will rapidly collect and preserve evidence of flood levels and flow, changes to the landscape and river channel, sediment deposits, and water chemistry from the collapse site to downstream river sections. The resulting datasets and field-based case studies will support interdisciplinary training in hydrology, geomorphology, and geochemistry at participating U.S. and Nepalese universities. Results will also inform management of cascading hazards around the world.\r\n\r\nThis project will collect essential on-the-ground data to provide critical information on the ice-rock collapse and flood event that cannot be resolved from satellite observations. Field measurements will guide investigation of how sediment entrainment, temporary blockages, and channel confinement governed flood propagation, and how sediment provenance and water\u2013rock interactions influenced downstream hydrochemistry. Integrated flood-mark surveys, channel geometry, deposit characterization, and paired water\u2013sediment analyses will constrain event reconstruction and evaluation of coupled flow and sediment-transport models. Repeat sampling at fixed locations will characterize post-event hydrochemical evolution. Open data products will also support future cascading-hazard assessments and strengthen collaboration among researchers and hazard-management practitioners.\r\n\r\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2701998",
+      "matched_kw": "hydrology",
+      "status": "new",
+      "notes": "",
+      "created_at": "2026-10-27 18:35:30",
+      "updated_at": "2026-10-27 18:35:30"
+    },
     {
       "ref_id": 18,
       "source_type": "faculty",
